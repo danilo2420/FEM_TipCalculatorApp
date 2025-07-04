@@ -4,12 +4,11 @@
     body {
         display: flex;
         justify-content: center;
-
-        margin-bottom: 50px;
     }
 
     .container {
         width: 608px;
+        margin-bottom: 50px;
     }
 
     .calculator {

@@ -1,0 +1,38 @@
+@import 'tablet.css';
+
+@media (min-width: 1100px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .calculator {
+        padding: 32px 40px;
+
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .calculator__input {
+        gap: 40px;
+    }
+
+
+    .calculator__output {
+        width: 413px;
+        height: 417px;
+        box-sizing: border-box;
+
+        justify-content: space-between;
+    }
+
+    .calculator__output__results {
+        gap: 24px;
+    }
+}
