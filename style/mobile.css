@@ -38,43 +38,10 @@
     gap: 8px;
 }
 
-.calculator__input__bill__label {
-    color: var(--grey500);
-}
-
-.calculator__input__bill__label__input {
-    all: unset;
-    padding: 6px 18px 6px 36px;
-
-    height: 48px;
-    width: 100%;
-    box-sizing: border-box;
-
-    background-color: var(--grey50);
-    border-radius: 5px;
-    color: var(--green900);
-
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0px;
-
-    text-align: right;
-
-    /* Dollar icon */
-    background-image: url('../images/icon-dollar.svg');
-    background-position: 18.5px 21px;
-    background-repeat: no-repeat;
-}
-
 .calculator__input__tip {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.calculator__input__tip__label {
-    color: var(--grey500);
 }
 
 .calculator__input__tip__select {
@@ -108,4 +75,14 @@
 .item--active {
     background-color: var(--green400);
     color: var(--green900);
+}
+
+.calculator__input__people {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.personIcon {
+    background-image: url('../images/icon-person.svg');
 }

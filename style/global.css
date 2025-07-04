@@ -73,3 +73,33 @@ body {
     line-height: 19px;
     letter-spacing: 0px;   
 }
+
+/* Shared styles */
+.sectionLabel {
+    color: var(--grey500);
+}
+
+.textInput {
+    all: unset;
+    padding: 6px 18px 6px 36px;
+
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: var(--grey50);
+    border-radius: 5px;
+    color: var(--green900);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+
+    text-align: right;
+
+    /* Dollar icon */
+    background-image: url('../images/icon-dollar.svg');
+    background-position: 18.5px 16px;
+    background-repeat: no-repeat;
+}
