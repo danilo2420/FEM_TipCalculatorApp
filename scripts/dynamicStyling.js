@@ -1,1 +1,8 @@
-console.log('dynamic stylign says hello');
+
+
+function main() {
+    console.log('hello');
+}
+
+
+main();
