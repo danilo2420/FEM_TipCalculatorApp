@@ -1,0 +1,28 @@
+@import 'mobile.css';
+
+@media (min-width: 700px) {
+    body {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 50px;
+    }
+
+    .container {
+        width: 608px;
+    }
+
+    .calculator {
+        padding: 54px 75.5px;
+
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        gap: 40px;
+    }
+
+    .calculator__input {
+        padding: 0px;
+        gap: 24px;
+    }
+}
