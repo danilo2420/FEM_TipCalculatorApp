@@ -47,4 +47,8 @@
     .calculator__output {
         gap: 16px;
     }
+
+    .calculator__input__tip__select__item {
+        cursor: pointer;
+    }
 }
