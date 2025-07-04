@@ -21,6 +21,30 @@
     background-color: var(--white);
 
     border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    
+    border-top-right-radius: 25px;   
+}
+
+.calculator__input {
+    padding: 0px 8px;
+}
+
+.calculator__input__bill {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calculator__input__bill__label {
+    color: var(--grey500);
+}
+
+.calculator__input__bill__label__input {
+    all: unset;
+    padding: 6px 18px;
+
+    height: 48px;
+    background-color: var(--grey50);
+    border-radius: 5px;
+
+    text-align: right;
 }
