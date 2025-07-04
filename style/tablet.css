@@ -1,6 +1,6 @@
 @import 'mobile.css';
 
-@media (min-width: 700px) {
+@media (min-width: 650px) {
     body {
         display: flex;
         justify-content: center;
@@ -24,5 +24,28 @@
     .calculator__input {
         padding: 0px;
         gap: 24px;
+    }
+
+    .calculator__input__tip__select {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .calculator__output {
+        padding: 43px 47.5px;
+    }
+
+    .calculator__output__results {
+        gap: 8px;
+    }
+
+    .calculator__output__results__item__right {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 71px;
+        letter-spacing: -1px;   
+    }
+
+    .calculator__output {
+        gap: 16px;
     }
 }
