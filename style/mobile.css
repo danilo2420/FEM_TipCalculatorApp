@@ -1,0 +1,26 @@
+@import 'global.css';
+
+.container {
+    border: solid red 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    padding: 50px 0px 41px 0px;
+    color: var(--grey600);
+}
+
+.calculator {
+    padding: 34px 24px;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: var(--white);
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+}
