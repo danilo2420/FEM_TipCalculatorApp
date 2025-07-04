@@ -103,3 +103,7 @@ body {
     background-position: 18.5px 16px;
     background-repeat: no-repeat;
 }
+
+.textInput::placeholder {
+    opacity: 0.35;
+}
