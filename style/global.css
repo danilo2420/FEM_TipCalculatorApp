@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* Colors */
+    --white: #FFF;
+    --black: #000;
+
+    --grey50: #F3F9FA;
+    --grey200: #C5E4E7;
+    --grey300: #9EBBBD;
+    --grey400: #7F9D9F;
+    --grey500: #5E7A7D;
+    --grey550: #547878;
+    --grey600: #3D6666;
+
+    --green200: #9FE8DF;
+    --green400: #26C2AE;
+    --green750: #0D686D;
+    --green800: #085C61;
+    --green900: #00474B;
+
+    --orange: #E17052;
+}
+
+/* Typographies */
+.tp1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1px;
+}
+
+.tp2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -0.67px;
+}
+
+.tp3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+.tp4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0px;
+}
+
+.tp5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+.tp6 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0px;   
+}
