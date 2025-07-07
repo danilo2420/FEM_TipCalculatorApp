@@ -112,3 +112,18 @@ body {
     background-color: var(--green750) !important;
     color: var(--green800) !important;
 }
+
+/* Error stuff */
+.errorContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.errorMessage {
+    color: var(--orange);
+}
+
+.input--error {
+    border: solid var(--orange) 2px;
+}

@@ -14,16 +14,13 @@ let chosenTip = 15;
 
 function main() {
     deactivateOutput();
-    // Main calculation functionality
     setEventListeners();
-
-    // Reset functionality
-
 }
 
 function setEventListeners() {
     inputBill.addEventListener('input', () => {
         calculateTip();
+        // clear error message
     });
     buttons.forEach(
         (button) => button.addEventListener(
@@ -36,7 +33,9 @@ function setEventListeners() {
     })
     btnReset.addEventListener('click', () => {
         resetInput();
+        // clear error message
     });
+    // setValidationEventListeners();
 }
 
 const handleSelectTipButton = (button) => {

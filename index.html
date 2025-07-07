@@ -15,10 +15,13 @@
         <div class="calculator">
             <div class="calculator__input">
                 <div class="calculator__input__bill">
-                    <div class="calculator__input__bill__label sectionLabel tp5">Bill</div>
+                    <div class="errorContainer">
+                        <div class="calculator__input__bill__label sectionLabel tp5">Bill</div>
+                        <div class="errorMessage tp5">Error message</div>
+                    </div>
                     <input 
                         type="number" 
-                        class="calculator__input__bill__label__input textInput"
+                        class="calculator__input__bill__label__input textInput input--error"
                         placeholder="0">
                 </div>
                 <div class="calculator__input__tip">
@@ -33,7 +36,10 @@
                     </div>
                 </div>
                 <div class="calculator__input__people">
-                    <div class="calculator__input__people__label sectionLabel tp5">Number of People</div>
+                    <div class="errorContainer">
+                        <div class="calculator__input__people__label sectionLabel tp5">Number of People</div>
+                        <div class="errorMessage tp5">Error message</div>
+                    </div>
                     <input 
                         type="number" 
                         class="calculator__input__people__input personIcon textInput"
