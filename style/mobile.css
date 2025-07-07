@@ -67,11 +67,15 @@
     font-weight: 700;
     line-height: 36px;
     letter-spacing: 0px;
+
+    transition: background-color 0.1s, color 0.1s;
 }
 
 .item--custom {
     background-color: var(--grey50);
     color: var(--grey550);
+
+    cursor: default !important;
 }
 
 .item--active {
@@ -149,5 +153,7 @@
 
     background-color: var(--green400);
     cursor: pointer;
+
+    transition: background-color 0.1s, color 0.1s;
 }
 

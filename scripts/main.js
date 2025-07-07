@@ -14,7 +14,7 @@ const errBill = document.querySelector('.errBill');
 const errPeople = document.querySelector('.errPeople');
 
 // Variables
-const maxValue = 99999999;
+const maxValue = 999999;
 let chosenTip = 15;
 
 function main() {

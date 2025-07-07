@@ -18,6 +18,12 @@
         border-bottom-right-radius: 25px;
 
         gap: 40px;
+
+        transition: box-shadow 0.3s;
+    }
+
+    .calculator:hover {
+        box-shadow: 5px 10px 60px #b0cbce;
     }
 
     .calculator__input {

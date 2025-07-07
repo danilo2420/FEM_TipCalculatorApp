@@ -104,6 +104,10 @@ body {
     background-repeat: no-repeat;
 
     cursor: pointer;
+
+    border-color: var(--grey50);
+
+    transition: border-color 0.2s;
 }
 
 .textInput::placeholder {
