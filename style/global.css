@@ -102,15 +102,23 @@ body {
     background-image: url('../images/icon-dollar.svg');
     background-position: 18.5px 16px;
     background-repeat: no-repeat;
+
+    cursor: pointer;
 }
 
 .textInput::placeholder {
     opacity: 0.35;
 }
 
+.textInput:focus {
+    border: solid var(--green400) 3px;
+}
+
 .reset--disabled {
     background-color: var(--green750) !important;
     color: var(--green800) !important;
+
+    cursor: default !important;
 }
 
 /* Error stuff */
@@ -126,5 +134,5 @@ body {
 }
 
 .input--error {
-    border: solid var(--orange) 2px;
+    border: solid var(--orange) 3px;
 }

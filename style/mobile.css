@@ -148,5 +148,6 @@
     align-items: center;
 
     background-color: var(--green400);
+    cursor: pointer;
 }
 
