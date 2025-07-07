@@ -7,14 +7,18 @@ const inputPeople = document.querySelector('.calculator__input__people__input');
 const outputTip = document.querySelector('.outputTip');
 const outputTotal = document.querySelector('.outputTotal');
 
+const btnReset = document.querySelector('.calculator__output__button');
+
 // Variables
 let chosenTip = 15;
 
 function main() {
+    deactivateOutput();
     // Main calculation functionality
     setEventListeners();
 
     // Reset functionality
+
 }
 
 function setEventListeners() {
@@ -30,6 +34,9 @@ function setEventListeners() {
     inputPeople.addEventListener('input', () => {
         calculateTip();
     })
+    btnReset.addEventListener('click', () => {
+        resetInput();
+    });
 }
 
 const handleSelectTipButton = (button) => {
@@ -42,16 +49,13 @@ const handleSelectTipButton = (button) => {
 }
 
 function calculateTip() {
-    console.log('Calculating tip...');
     // Get values
     const bill = inputBill.value;
     const people = inputPeople.value;
 
     // Validation
     if (!validateInput(bill, people)) {
-        console.log('Input did not pass validation');
-        outputTotal.innerHTML = formatCurrency(0);
-        outputTip.innerHTML = formatCurrency(0);
+        deactivateOutput();
         return;
     }
 
@@ -61,11 +65,11 @@ function calculateTip() {
 
     outputTotal.innerHTML = formatCurrency(totalPerPerson);
     outputTip.innerHTML = formatCurrency(tipPerPerson);
+    btnReset.classList.remove('reset--disabled');
 }
 
 function validateInput(bill, people) {
     if (isNaN(bill) || bill.length == 0) {
-        console.log('returning');
         return false;
     }
 
@@ -74,11 +78,17 @@ function validateInput(bill, people) {
     }
 
     if (isNaN(people) || people.length == 0) {
-        console.log('returning');
         return false;
     }
 
     return true;
+}
+
+function deactivateOutput() {
+    outputTotal.innerHTML = formatCurrency(0);
+    outputTip.innerHTML = formatCurrency(0);
+
+    btnReset.classList.add('reset--disabled');
 }
 
 function formatCurrency(value) {
@@ -88,6 +98,21 @@ function formatCurrency(value) {
     value = Math.floor(value);
 
     return '$' + (value/100);
+}
+
+function resetInput() {
+    if (btnReset.classList.contains('reset--disabled')) return;
+
+    setInitialInput();
+    deactivateOutput();
+}
+
+function setInitialInput() {
+    inputBill.value = '';
+    inputPeople.value = '';
+
+    const btnTip15 = document.getElementById('tip15');
+    handleSelectTipButton(btnTip15);
 }
 
 

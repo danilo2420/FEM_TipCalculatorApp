@@ -107,3 +107,8 @@ body {
 .textInput::placeholder {
     opacity: 0.35;
 }
+
+.reset--disabled {
+    background-color: var(--green750) !important;
+    color: var(--green800) !important;
+}
