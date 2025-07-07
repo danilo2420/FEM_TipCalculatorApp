@@ -9,7 +9,12 @@ const outputTotal = document.querySelector('.outputTotal');
 
 const btnReset = document.querySelector('.calculator__output__button');
 
+// # Error messages
+const errBill = document.querySelector('.errBill');
+const errPeople = document.querySelector('.errPeople');
+
 // Variables
+const maxValue = 99999999;
 let chosenTip = 15;
 
 function main() {
@@ -20,7 +25,13 @@ function main() {
 function setEventListeners() {
     inputBill.addEventListener('input', () => {
         calculateTip();
-        // clear error message
+        clearErrorMessage(inputBill, errBill);
+        const value = inputBill.value;
+        if (value > maxValue) {
+            errBill.textContent = "Value is too high";
+            errBill.style.visibility = 'visible';
+            inputBill.classList.add('input--error');
+        }
     });
     buttons.forEach(
         (button) => button.addEventListener(
@@ -30,15 +41,23 @@ function setEventListeners() {
     );
     inputPeople.addEventListener('input', () => {
         calculateTip();
+        clearErrorMessage(inputPeople, errPeople);
+        const value = inputPeople.value;
+        if (value > maxValue) {
+            errPeople.textContent = "Value is too high";
+            errPeople.style.visibility = 'visible';
+            inputPeople.classList.add('input--error');
+        }
     })
     btnReset.addEventListener('click', () => {
         resetInput();
-        // clear error message
     });
-    // setValidationEventListeners();
+    setValidationEventListeners();
 }
 
 const handleSelectTipButton = (button) => {
+    if (button.classList.contains('item--custom')) return;
+
     chosenTip = button.dataset.tip
     buttons.forEach((button) => {
         button.classList.remove('item--active');
@@ -71,6 +90,7 @@ function validateInput(bill, people) {
     if (isNaN(bill) || bill.length == 0) {
         return false;
     }
+    if (bill > maxValue) return false;
 
     if (chosenTip == undefined) {
         return false;
@@ -79,6 +99,8 @@ function validateInput(bill, people) {
     if (isNaN(people) || people.length == 0) {
         return false;
     }
+
+    if (people > maxValue) return;
 
     return true;
 }
@@ -104,6 +126,8 @@ function resetInput() {
 
     setInitialInput();
     deactivateOutput();
+    clearErrorMessage(inputBill, errBill);
+    clearErrorMessage(inputPeople, errPeople);
 }
 
 function setInitialInput() {
@@ -114,5 +138,28 @@ function setInitialInput() {
     handleSelectTipButton(btnTip15);
 }
 
+function setValidationEventListeners() {
+    inputBill.addEventListener('focusout', () => {
+        value = inputBill.value;
+        if (value == 0 || value.length == 0) {
+            errBill.textContent = "Can't be zero";
+            errBill.style.visibility = 'visible';
+            inputBill.classList.add('input--error');
+        } 
+    });
+    inputPeople.addEventListener('focusout', () => {
+        value = inputPeople.value;
+        if (value == 0 || value.length == 0) {
+            errPeople.textContent = "Can't be zero";
+            errPeople.style.visibility = 'visible';
+            inputPeople.classList.add('input--error');
+        } 
+    });
+}
+
+function clearErrorMessage(elmnt, err) {
+    elmnt.classList.remove('input--error');
+    err.style.visibility = 'hidden';
+}
 
 main();
